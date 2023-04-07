@@ -76,9 +76,13 @@ Number Cardinality Checker is an app that takes an integer as input and returns 
 ### Features:
 
 `Input`: The app takes an integer as input.
+
 `Output`: The app returns a string as output, which can be one of the following: "zero", "five", "even", or "odd".
+
 `User-friendly interface`: The app has a simple and easy-to-use interface that allows users to input a number and receive the corresponding string as output.
+
 `Accurate results`: The app accurately determines the cardinality of the input number and returns the correct string as output.
+
 `Instantaneous response`: The app provides instantaneous results, allowing users to quickly determine the cardinality of their input number.
 
 Example Usage:
