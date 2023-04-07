@@ -81,3 +81,16 @@ Number Cardinality Checker is an app that takes an integer as input and returns 
 `Accurate results`: The app accurately determines the cardinality of the input number and returns the correct string as output.
 `Instantaneous response`: The app provides instantaneous results, allowing users to quickly determine the cardinality of their input number.
 
+Example Usage:
+Input: 100
+Output: "zero"
+
+Input: 88
+Output: "even"
+
+Input: 155
+Output: "five"
+
+Input: 99
+Output: "odd
+
