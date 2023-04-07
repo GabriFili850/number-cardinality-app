@@ -26,7 +26,8 @@ function NumberCardinality() {
   const [input, setInput] = useState("");
   const [result, setResult] = useState(null);
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the form from submitting and refreshing the page
     const number = parseInt(input);
     if (!isNaN(number)) {
       const cardinality = number_cardinality(number);
@@ -42,23 +43,25 @@ function NumberCardinality() {
         <Typography variant='h3' component='h1' gutterBottom>
           Number Cardinality
         </Typography>
-        <Box display='flex' alignItems='center' mb={2}>
-          <TextField
-            type='text'
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            label='Enter a number'
-            variant='outlined'
-          />
-          <Button
-            onClick={handleSubmit}
-            variant='contained'
-            color='primary'
-            sx={{ marginLeft: 1 }}
-          >
-            Submit
-          </Button>
-        </Box>
+        <form onSubmit={handleSubmit}>
+          <Box display='flex' alignItems='center' mb={2}>
+            <TextField
+              type='text'
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              label='Enter a number'
+              variant='outlined'
+            />
+            <Button
+              type='submit'
+              variant='contained'
+              color='primary'
+              sx={{ marginLeft: 1 }}
+            >
+              Submit
+            </Button>
+          </Box>
+        </form>
         {result && (
           <Typography variant='h6' component='p'>
             Result: {result}
